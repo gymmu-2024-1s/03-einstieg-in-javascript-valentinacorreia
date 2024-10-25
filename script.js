@@ -48,11 +48,9 @@ export function aufgabe02(args) {
 
   // Läuft Zeuchen für Zeichen über den ganzen Text
   for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-
-    // Hänge das aktuelle Zeichen doppelt an
-    result.push(currentElement)
-    result.push(currentElement)
+    const currentLetter = input[i]
+    const currentUpperCaseLetter = currentLetter.toUpperCase()
+    result.push(currentUpperCaseLetter)
   }
 
   return result.join("")
