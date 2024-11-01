@@ -83,3 +83,19 @@ export function aufgabe04(args) {
 
 //Beispiel für den Aufruf
 linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
+
+export function aufgabe05(args) {
+  const input = args.trim() //Entferne führende und nachfolgende Leerzeichen
+  return /[A-Z]/.test(input) //Überprüft, ob mindestens ein Grossbuchstaben vorhanden ist
+}
+
+// Beispiel für den Aufruf
+linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
+
+export function aufgabe06(args) {
+  const input = args.trim() //Entferne führende und nachfolgende Leerzeichen
+  return /[+"@%&/)(?='éäöü!-_.:,;]/.test(input) //Überprüft, ob mindestens ein Grossbuchstaben vorhanden ist
+}
+
+// Beispiel für den Aufruf
+linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
