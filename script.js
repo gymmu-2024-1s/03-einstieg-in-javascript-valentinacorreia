@@ -74,3 +74,12 @@ export function aufgabe03(args) {
   return count
 }
 linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03)
+
+export function aufgabe04(args) {
+  const input = args.trim() // Entferne führende und nachfolgende Leerzeichen
+  const words = input.split(/\s+/) //Teilt den Körper in Wörter auf
+  return input.length > 0 ? words.length : 0 // Gibt die Anzahl Wörter an
+}
+
+//Beispiel für den Aufruf
+linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
