@@ -76,7 +76,7 @@ export function aufgabe03(args) {
 linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03)
 
 export function aufgabe04(args) {
-  const input = args.trim() // Entferne führende und nachfolgende Leerzeichen
+  const input = args.trim() // mit "Trim"  entfernen wir alle führenden und nachfolgenden Leerzeichen der Variable.
   const words = input.split(/\s+/) //Teilt den Körper in Wörter auf
   return input.length > 0 ? words.length : 0 // Gibt die Anzahl Wörter an
 }
@@ -99,3 +99,21 @@ export function aufgabe06(args) {
 
 // Beispiel für den Aufruf
 linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
+
+export function aufgabe07(args) {
+  const input = args.toLowerCase() // Konvertiere den Text in Kleinbuchstaben
+
+  // Lösung kommt von KI
+  // mit Variable.includes("text") kann getestet werden, ob die Zeichenkette "text" in der Variable vorkommt
+  return input.includes("und")
+}
+linkupExerciseHandler("[data-click=aufgabe07]", aufgabe07)
+// TODO: Schreibe eine Function die testet ob das Wort "und" in einem Text vorkommt.
+// TODO: Schreibe eine Function die alle "e" mit "3" ersetzt.
+
+export function aufgabe09(args) {
+  const input = args.trim() // Entferne führende und nachfolgende Leerzeichen
+  return input.length === 6 // Testet, ob die Eingabe genau 6 Zeichen lang ist
+}
+linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
+// TODO: Schreibe eine Function die testet ob eine Eingabe genau sechs Zeichen lang ist
