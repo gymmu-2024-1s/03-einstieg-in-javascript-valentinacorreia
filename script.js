@@ -76,9 +76,19 @@ export function aufgabe03(args) {
 linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03)
 
 export function aufgabe04(args) {
-  const input = args.trim() // mit "Trim"  entfernen wir alle führenden und nachfolgenden Leerzeichen der Variable.
-  const words = input.split(/\s+/) //Teilt den Körper in Wörter auf
-  return input.length > 0 ? words.length : 0 // Gibt die Anzahl Wörter an
+  const input = args
+  // Erstelle eine zählervariable für die leerzeichen
+  let count = 0
+
+  // Überprüfe jedes Zeichen in der Eingabe
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === " ") {
+      count = count + 1
+    }
+  }
+  // Gib count + 1 zurück, weil es ein wort mehr gibt wie leerzeichen
+  return count + 1
 }
 
 //Beispiel für den Aufruf
