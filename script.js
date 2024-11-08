@@ -96,6 +96,15 @@ linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
 
 export function aufgabe05(args) {
   const input = args
+  const result = []
+  let hasUpperCase = false
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const upperCaseVersion = currentElement.toUpperCase()) {
+      if 8
+    }
+
   return /[A-Z]/.test(input) //Überprüft, ob mindestens ein Grossbuchstaben vorhanden ist
 }
 
