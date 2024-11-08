@@ -135,7 +135,14 @@ export function aufgabe11(arg) {
 
   //Speichere den ASCII-Code vom ersten Zeichen
   asciiCode = input.charCodeAt(0)
+  // Sollte "null" zurückgeben wenn mehr wie ein Zeichen gegeben sind
+  if (input.length > 1) {
+    return null
 
+    // Sollte "null" zurückgeben wenn keine Eingabe gegeben ist
+  } else if (input.length === 0) {
+    return null
+  }
   // Gib den ASCII-Code zurück
   return asciiCode
 }
