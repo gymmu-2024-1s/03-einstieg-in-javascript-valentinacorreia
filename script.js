@@ -122,11 +122,23 @@ linkupExerciseHandler("[data-click=aufgabe07]", aufgabe07)
 // TODO: Schreibe eine Function die alle "e" mit "3" ersetzt.
 
 export function aufgabe09(args) {
-  const input = args.trim() // Entferne führende und nachfolgende Leerzeichen
-  return input.length === 6 // Testet, ob die Eingabe genau 6 Zeichen lang ist
+  const input = args // Speichert den Wert von args in der Variable `input`, damit wird für uns klarer, was wir gerade bearbeiten.
+  const result = []
+
+  let is6long = false // Zählt ob derr Text 6 Zeichen lang ist oder nicht
+  let count = 0 // Lässt den Anfang bei 0 starten
+
+  for (let i = 0; i < input.length; i++) {
+    // "i" ersetzt 0. Dann wird die Kurzform angewendet.
+    const currentElement = input[i]
+    count = count + 1
+  }
+  if (count === 6) {
+    is6long = true // bestimmt ob die Zeichenzahl dieser Anzahl entspricht
+  }
+  return is6long
 }
 linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
-// TODO: Schreibe eine Function die testet ob eine Eingabe genau sechs Zeichen lang ist
 
 export function aufgabe11(arg) {
   const input = arg
