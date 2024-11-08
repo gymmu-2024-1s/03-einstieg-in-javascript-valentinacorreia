@@ -127,3 +127,16 @@ export function aufgabe09(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
 // TODO: Schreibe eine Function die testet ob eine Eingabe genau sechs Zeichen lang ist
+
+export function aufgabe11(arg) {
+  const input = arg
+  // Erstelle eine Variable um den ASCII-Code zu speichern
+  let asciiCode = null
+
+  //Speichere den ASCII-Code vom ersten Zeichen
+  asciiCode = input.charCodeAt(0)
+
+  // Gib den ASCII-Code zurück
+  return asciiCode
+}
+linkupExerciseHandler("[data-click=aufgabe11]", aufgabe11)
