@@ -95,20 +95,9 @@ export function aufgabe04(args) {
 linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
 
 export function aufgabe05(args) {
-  const input = args
-  const result = []
-  let hasUpperCase = false
-
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-    const upperCaseVersion = currentElement.toUpperCase()) {
-      if 8
-    }
-
-  return /[A-Z]/.test(input) //Überprüft, ob mindestens ein Grossbuchstaben vorhanden ist
+  return /[A-Z]/.test(args) // überprüft, ob mindestens ein Grossbuchstaben
 }
 
-// Beispiel für den Aufruf
 linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
 
 export function aufgabe06(args) {
@@ -130,6 +119,22 @@ linkupExerciseHandler("[data-click=aufgabe07]", aufgabe07)
 // TODO: Schreibe eine Function die testet ob das Wort "und" in einem Text vorkommt.
 // TODO: Schreibe eine Function die alle "e" mit "3" ersetzt.
 
+export function aufgabe08(args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    if (currentElement === "e") {
+      //do nothing
+      result.push(3) // 3 ersetzt "e"
+    } else {
+      result.push(currentElement)
+    }
+  }
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=aufgabe08]", aufgabe08)
 export function aufgabe09(args) {
   const input = args // Speichert den Wert von args in der Variable `input`, damit wird für uns klarer, was wir gerade bearbeiten.
   const result = []
@@ -149,6 +154,13 @@ export function aufgabe09(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
 
+export function aufgabe10(args) {
+  const input = args
+  const result = []
+
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=aufgabe10]", aufgabe10)
 export function aufgabe11(arg) {
   const input = arg
   // Erstelle eine Variable um den ASCII-Code zu speichern
