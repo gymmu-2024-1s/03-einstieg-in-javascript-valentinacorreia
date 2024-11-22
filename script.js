@@ -227,6 +227,22 @@ export function aufgabe13(arg) {
 }
 linkupExerciseHandler("[data-click=aufgabe13]", aufgabe13)
 
+export function aufgabe14(arg) {
+  const input = arg
+  let count = 0
+  // suche die position des dritten e's
+  for (let i = 0; i < input.length; i++) {
+    if (input[i] === "e") {
+      count++
+    }
+    if (count === 3) {
+      return i
+    }
+  }
+  return -1
+}
+linkupExerciseHandler("[data-click=aufgabe14]", aufgabe14)
+
 export function aufgabe22(args) {
   const input = args
   const result = []
