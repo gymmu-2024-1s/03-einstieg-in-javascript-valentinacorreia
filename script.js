@@ -194,3 +194,31 @@ export function aufgabe11(arg) {
   return asciiCode
 }
 linkupExerciseHandler("[data-click=aufgabe11]", aufgabe11)
+
+export function aufgabe22(args) {
+  const input = args
+  const result = []
+
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=aufgabe22]", aufgabe22)
+
+export function aufgabe24(args) {
+  //Vertausche das erste und das letzte Zeichen
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (i === 0) {
+      result.push(input[input.length - 1])
+    } else if (i === input.length - 1) {
+      result.push(input[0])
+    } else {
+      result.push(currentElement)
+    }
+  }
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=aufgabe24]", aufgabe24)
