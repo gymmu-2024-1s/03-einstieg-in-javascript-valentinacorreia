@@ -195,6 +195,38 @@ export function aufgabe11(arg) {
 }
 linkupExerciseHandler("[data-click=aufgabe11]", aufgabe11)
 
+export function aufgabe12(arg) {
+  const input = arg
+  const result = []
+  // Erstelleeeine Variable um die Position des ersten e's zu speichern
+  let firstEPosition = -1
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    // Suche die Position des ersten e's
+    if (currentElement === "e") {
+      return i // er springt aus der Funktion raus, wenn e gefunden wird bricht es ab und es wird nicht mehr ausgeführt.
+    }
+  }
+  return -1 // -1 zeigt an, dass es nicht in der Liste steht
+}
+linkupExerciseHandler("[data-click=aufgabe12]", aufgabe12)
+
+export function aufgabe13(arg) {
+  const input = arg
+  let lastIndex = -1
+  // suche die position des letzten e's
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+      lastIndex = i
+    }
+  }
+
+  return lastIndex
+}
+linkupExerciseHandler("[data-click=aufgabe13]", aufgabe13)
+
 export function aufgabe22(args) {
   const input = args
   const result = []
