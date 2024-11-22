@@ -30,8 +30,8 @@ export function aufgabe01(args) {
     const currentElement = input[i]
     if (currentElement === "e") {
       // do nothing
+    } else if (currentElement === "E") {
     } else {
-      currentElement === "E"
       // auch E ignorieren
 
       result.push(currentElement)
@@ -67,7 +67,7 @@ export function aufgabe03(args) {
   let count = 0
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    if (currentElement === "e") {
+    if (currentElement === "e" || currentElement === "E") {
       count = count + 1
     }
   }
@@ -222,3 +222,17 @@ export function aufgabe24(args) {
   return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe24]", aufgabe24)
+
+export function aufgabe27(args) {
+  const input = args
+  const result = []
+  // sollte testen ob die Eingabe eine Zahl ist
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement >= "0" && currentElement <= "9") {
+      result.push(currentElement)
+    }
+  }
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=aufgabe27]", aufgabe27)
