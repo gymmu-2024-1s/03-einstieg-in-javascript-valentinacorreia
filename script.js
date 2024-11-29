@@ -243,6 +243,58 @@ export function aufgabe14(arg) {
 }
 linkupExerciseHandler("[data-click=aufgabe14]", aufgabe14)
 
+export function aufgabe15(arg) {
+  const input = arg
+  const result = []
+  // lesen sie die Eingabe nur bis zum ersten Leerzeichen
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === " ") {
+      break
+    }
+    result.push(currentElement)
+  }
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=aufgabe15]", aufgabe15)
+export function aufgabe16(args) {
+  const input = args
+  const result = []
+  //lesen sie die Eingabe bis zum Zeichen '$' als ersten Teil einer Liste ein, und den Resr als den zweiten Teil.
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "$") {
+      break
+    }
+    result.push(currentElement)
+  }
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
+
+export function aufgabe19(args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    // sollte 'aa' heissen
+    if (currentElement === "aa") {
+      result.push("aa")
+    }
+  }
+  //jedes Zeichen sollte verdoppelt werden
+  for (let i = 0; i < result.length; i++) {
+    const currentElement = input[i]
+    result.push(currentElement)
+    result.push(currentElement)
+  }
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=aufgabe19]", aufgabe19)
+
 export function aufgabe22(args) {
   const input = args
   const result = []
