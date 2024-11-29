@@ -295,6 +295,37 @@ export function aufgabe19(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe19]", aufgabe19)
 
+export function aufgabe20(args) {
+  const input = args
+  const result = []
+  let allGood = true
+  //prüfe ob nach jeden "." ein Leerschlag kommt
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === ".") {
+      //prüfe ob das nächste Zeichen ein Leerschlag ist
+      if (input[i + 1] === " ") {
+        //do nothing
+      } else {
+        allGood = false
+      }
+    }
+  }
+  return allGood
+}
+linkupExerciseHandler("[data-click=aufgabe20]", aufgabe20)
+
+export function aufgabe21(args) {
+  const input = args
+  const result = []
+  //kehre die Eingabe um
+  for (let i = input.length - 1; i >= 0; i--) {
+    const currentElement = input[i]
+    result.push(currentElement)
+  }
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=aufgabe21]", aufgabe21)
 export function aufgabe22(args) {
   const input = args
   const result = []
