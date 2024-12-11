@@ -307,7 +307,7 @@ export function aufgabe17(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     //Wenn wir auf ein Leerzeichen treffen, dann schreiben wir alles was wir bis jetzt haben, in die totalList
-    if (currentElement === " ") {
+    if (currentElement === ",") {
       totalList.push(currentList.join(""))
       currentList.length = 0
     } else {
