@@ -77,21 +77,46 @@ linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03)
 
 export function aufgabe04(args) {
   const input = args
-  // Erstelle eine zählervariable für die leerzeichen
-  let count = 0
-
-  // Überprüfe jedes Zeichen in der Eingabe
+  const result = []
+  //Wir filtern die eingabe so, dass nur noch Buchstaben und Leerzeichen übrig bleiben
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    if (currentElement === " ") {
-      count = count + 1
+    const ascii = currentElement.charCodeAt(0)
+
+    if (ascii >= 65 && ascii <= 90) {
+      //Grossbuchstaben
+      result.push(currentElement)
+    } else if (ascii >= 97 && ascii <= 122) {
+      //Kleinbuchstaben
+      result.push(currentElement)
+    } else if (ascii === 32) {
+      //Lerrzeichen
+      result.push(currentElement)
     }
   }
-  // Gib count + 1 zurück, weil es ein wort mehr gibt wie leerzeichen
+  // Jetzt könnten wir noch mehrere Leerzeichen am Stück haben, die müssen wir noch Filtern
+  const result2 = []
+  for (let i = 0; i < result.length; i++) {
+    const currentElement = result[i]
+    const nextElement = result[i + 1]
+
+    if (currentElement === " " && nextElement === " ") {
+      // Hier sind 2 Leerzeichen hintereinander, wir ignorieren das erste
+    } else {
+      result2.push(currentElement)
+    }
+  }
+  //Jetzt können wir die Leerzeichen zählen
+  let count = 0
+  for (let i = 0; i < result2.length; i++) {
+    const currentElement = result2[i]
+    if (currentElement === " ") {
+      count++
+    }
+  }
+  // Da es ein Wort mehr wie Leerzeichen gibt, geben wir Leerzeichen+1 zurück
   return count + 1
 }
-
-//Beispiel für den Aufruf
 linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
 
 export function aufgabe05(args) {
