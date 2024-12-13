@@ -425,6 +425,17 @@ export function aufgabe24(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe24]", aufgabe24)
 
+export function aufgabe25(args) {
+  const input = args
+  const result = []
+  // sollte testen on die Eingabe eine Zahl ist
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+  }
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=aufgabe25]", aufgabe25)
+
 export function aufgabe27(args) {
   const input = args
   const result = []
