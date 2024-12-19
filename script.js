@@ -148,15 +148,24 @@ export function aufgabe06(args) {
 linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
 
 export function aufgabe07(args) {
-  const input = args.toLowerCase() // Konvertiere den Text in Kleinbuchstaben
+  const input = args
+  let hasUnd = false
 
-  // Lösung kommt von KI
-  // mit Variable.includes("text") kann getestet werden, ob die Zeichenkette "text" in der Variable vorkommt
-  return input.includes("und")
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "u") {
+      const nextElement = input[i + 1]
+      if (nextElement === "n") {
+        const dElement = input[i + 2]
+        if (dElement === "d") {
+          hasUnd = true
+        }
+      }
+    }
+  }
+  return hasUnd
 }
 linkupExerciseHandler("[data-click=aufgabe07]", aufgabe07)
-// TODO: Schreibe eine Function die testet ob das Wort "und" in einem Text vorkommt.
-// TODO: Schreibe eine Function die alle "e" mit "3" ersetzt.
 
 export function aufgabe08(args) {
   const input = args
@@ -449,6 +458,22 @@ export function aufgabe27(args) {
   return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe27]", aufgabe27)
+
+export function aufgabe29(arg) {
+  const input = arg
+  let count = 0
+  // suche die position des dritten a's
+  for (let i = 0; i < input.length; i++) {
+    if (input[i] === "a") {
+      count++
+    }
+    if (count === 3) {
+      return i
+    }
+  }
+  return -1
+}
+linkupExerciseHandler("[data-click=aufgabe29]", aufgabe29)
 
 export function Bubblesort(args) {
   const text = args
