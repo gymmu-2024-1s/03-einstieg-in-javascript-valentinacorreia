@@ -475,15 +475,22 @@ linkupExerciseHandler("[data-click=aufgabe25]", aufgabe25)
 export function aufgabe26(args) {
   const input = args
   const result = []
-  // sollte testen on die Eingabe eine Zahl ist
+  // Vergleiche und vertausche das erste und das zweite Zeichen
+
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+    if (i === 0) {
+      result.push(input[1])
+    } else if (i === 1) {
+      result.push(input[0])
+    } else {
+      //do nothing
+      result.push(currentElement)
+    }
   }
   return result.join("")
 }
-
 linkupExerciseHandler("[data-click=aufgabe26]", aufgabe26)
-
 export function aufgabe27(args) {
   const input = args
   const result = []
@@ -497,6 +504,34 @@ export function aufgabe27(args) {
   return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe27]", aufgabe27)
+
+export function aufgabe28(args) {
+  const input = args
+  let num1, num2
+
+  // Suche nach den ersten beiden Zahlen im Array
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (!isNaN(currentElement)) {
+      // Überprüfe, ob das Element eine Zahl ist
+      if (!num1) {
+        num1 = parseInt(currentElement)
+      } else if (!num2) {
+        num2 = parseInt(currentElement)
+        break
+      }
+    }
+  }
+
+  // Wenn zwei Zahlen gefunden wurden, addiere sie
+  if (num1 !== undefined && num2 !== undefined) {
+    return num1 + num2
+  } else {
+    return "Keine zwei Zahlen gefunden"
+  }
+}
+
+linkupExerciseHandler("[data-click=aufgabe28]", aufgabe28)
 
 export function aufgabe29(arg) {
   const input = arg
@@ -513,6 +548,9 @@ export function aufgabe29(arg) {
   return -1
 }
 linkupExerciseHandler("[data-click=aufgabe29]", aufgabe29)
+
+export function aufgabe30(arg) {
+
 
 export function Bubblesort(args) {
   const text = args
