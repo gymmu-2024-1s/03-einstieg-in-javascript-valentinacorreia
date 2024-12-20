@@ -512,21 +512,18 @@ export function Selectionsort(args) {
   const result = []
   let n = input.length
   for (let i = 0; i < n - 1; i++) {
-    // Assume the current position holds
-    // the minimum element
+    // wenn die jetztige Position stimmt verschiebt es das kleinste element nicht
     let min_idx = i
 
-    // Iterate through the unsorted portion
-    // to find the actual minimum
+    //durchläuft den unsortierten Teil um das kleinste Element zu finden
     for (let j = i + 1; j < n; j++) {
       if (input[j] < input[min_idx]) {
-        // Update min_idx if a smaller element is found
+        // Update min_idx wenn ein Element kleiner ist
         min_idx = j
       }
     }
 
-    // Move minimum element to its
-    // correct position
+    // verschiebt das kleinste element zur korrekte position
     let temp = input[i]
     input[i] = input[min_idx]
     input[min_idx] = temp
