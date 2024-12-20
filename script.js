@@ -140,13 +140,21 @@ export function aufgabe05(args) {
 linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
 
 export function aufgabe06(args) {
-  const input = args.trim() //Entferne führende und nachfolgende Leerzeichen
-  return /[+"@%&/)(?='éäöü!-_.:,;]/.test(input) //Überprüft, ob mindestens ein Grossbuchstaben vorhanden ist
+  const input = args
+  const result = []
+  let hasSonderzeichen = false //sagt das es keine Sonderzeichen gibt, um später zu testen, ob es doch Sonderzeichen gibt
+  // Schreibe eine Funktion, die testet ob ein Sonderzeichen vorkommt
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const ascii = currentElement.charCodeAt(0)
+    if (ascii >= 33 && ascii <= 47) {
+      hasSonderzeichen = true // Wenn ein Sonderzeichen gefunden wird, wird hasSonderzeichen auf true gesetzt
+    }
+  }
+  return hasSonderzeichen //Sagt ob Sonderzeichen vorhanden sind
 }
-
-// Beispiel für den Aufruf
 linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
-
 export function aufgabe07(args) {
   const input = args
   let hasUnd = false
@@ -414,6 +422,26 @@ export function aufgabe22(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe22]", aufgabe22)
+ export function aufgabe23(args) {   const  ... x Christen, Franziska Patrizia (GymMU)Christen, Franziska Patrizia (GymMU)14:02
+export function aufgabe23(args) {
+  const input = args
+  const result = [] //Leere Liste, in der wir das Resultat anhängen
+  const firstelement = input[0]
+
+  // Hänge firstelement an die Liste an
+  result.push(firstelement)
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    result.push(currentElement)
+  }
+
+  result.push(firstelement) //Schreibe das erste Zeichen am Ende
+
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=aufgabe23]", aufgabe23)
 
 export function aufgabe24(args) {
   //Vertausche das erste und das letzte Zeichen
