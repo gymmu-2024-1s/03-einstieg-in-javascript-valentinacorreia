@@ -53,6 +53,7 @@ export function aufgabe02(args) {
   for (let i = 0; i < input.length; i++) {
     const currentLetter = input[i]
     const currentUpperCaseLetter = currentLetter.toUpperCase()
+    // Hänge das aktuelle Zeichen doppelt an
     result.push(currentUpperCaseLetter)
   }
 
@@ -182,7 +183,7 @@ export function aufgabe08(args) {
     const currentElement = input[i]
 
     if (currentElement === "e") {
-      //do nothing
+      //mache nichts
       result.push(3) // 3 ersetzt "e"
     } else {
       result.push(currentElement)
@@ -214,8 +215,7 @@ export function aufgabe10(args) {
   const input = args
   const result = []
 
-  return result.join("")
-}
+
 linkupExerciseHandler("[data-click=aufgabe10]", aufgabe10)
 export function aufgabe11(arg) {
   const input = arg
@@ -484,7 +484,7 @@ export function aufgabe26(args) {
     } else if (i === 1) {
       result.push(input[0])
     } else {
-      //do nothing
+      //mache nichts
       result.push(currentElement)
     }
   }
@@ -689,3 +689,4 @@ export function Radixsort(args) {
 
   return input.join("") // Wandelt das Array zurück in einen String um
 }
+linkupExerciseHandler("[data-click=Radixsort]", Radixsort)
