@@ -422,7 +422,6 @@ export function aufgabe22(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe22]", aufgabe22)
- export function aufgabe23(args) {   const  ... x Christen, Franziska Patrizia (GymMU)Christen, Franziska Patrizia (GymMU)14:02
 export function aufgabe23(args) {
   const input = args
   const result = [] //Leere Liste, in der wir das Resultat anhängen
